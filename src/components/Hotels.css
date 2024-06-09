@@ -1,0 +1,64 @@
+/* Hotels.css */
+
+.hotels-container {
+  padding: 20px;
+}
+
+.hotels-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left; /* Align the heading to the left */
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel-button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.hotel-card {
+  width: calc(100% - 100px); /* Adjusted width to accommodate arrows */
+  text-align: center;
+}
+
+.hotel-images {
+  display: grid;
+  width: 100%;
+  margin: 20px 0;
+  grid-template-columns: repeat(
+    var(--hotel-images-count, 4),
+    minmax(300px, 1fr)
+  );
+  gap: 20px;
+}
+
+.hotel-images img {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+@media (max-width: 1500px) {
+  .hotel-images {
+    --hotel-images-count: 3;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hotel-images {
+    --hotel-images-count: 2;
+  }
+}
+
+@media (max-width: 900px) {
+  .hotel-images {
+    --hotel-images-count: 1;
+  }
+}

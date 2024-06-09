@@ -1,0 +1,279 @@
+/* Home.css */
+
+.home-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.home-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.navbar-brand {
+  font-size: 28px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar-brand.reveal {
+  opacity: 1;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-item {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item .language {
+  width: 70px;
+  justify-content: center;
+}
+
+.modal {
+  position: absolute;
+  top: calc(100% + 20px);
+  left: calc(30% - 100px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+}
+
+.dark .modal {
+  background: #333;
+}
+
+.modal h2 {
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+.modal ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal ul li {
+  cursor: pointer;
+  padding: 5px 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.modal ul li:hover {
+  background-color: #f0f0f0;
+}
+
+.dark .modal ul li:hover {
+  background-color: #222;
+}
+
+.dark-mode-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.auth-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.auth-modal-content {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.auth-header {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.auth-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.auth-toggle-button.active {
+  background-color: #f0f0f0;
+}
+
+.auth-form {
+  transition: transform 0.3s ease-in-out;
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form form h2 {
+  margin-bottom: 20px;
+}
+
+.auth-form form label {
+  margin-bottom: 5px;
+}
+
+.auth-form form input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-button {
+  background-color: black;
+  color: white;
+  height: 40px;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Media Queries */
+
+/* For mobile devices (300px-600px) */
+@media (max-width: 600px) {
+  .home-container h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .auth-modal-content {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* For tablets (601px-991px) */
+@media (min-width: 601px) and (max-width: 991px) {
+  .home-container h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar-item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  .auth-modal-content {
+    width: 80%;
+    padding: 30px;
+  }
+}
+
+/* For desktops (992px-1440px) */
+@media (min-width: 992px) and (max-width: 1440px) {
+  .home-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar-menu {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .navbar-item {
+    margin-right: 20px;
+  }
+
+  .auth-modal-content {
+    width: 400px;
+    padding: 40px;
+  }
+}

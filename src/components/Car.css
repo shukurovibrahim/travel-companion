@@ -1,0 +1,105 @@
+/* Car.css */
+
+.car-container {
+  padding: 20px;
+}
+
+.car-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.car-types {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+}
+
+@media (max-width: 900px) {
+  .car-types {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
+
+.car img {
+  width: 200px; /* Adjust image width */
+  height: 200px; /* Adjust image height */
+  margin-bottom: 10px; /* Add space below the image */
+}
+
+.car h3 {
+  font-size: 18px;
+}
+
+.car p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.car button {
+  background-color: black; /* Button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.car button:hover {
+  background-color: grey; /* Darker button color on hover */
+}
+
+/* CarPopup.css */
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%; /* Adjust width as needed */
+  max-width: 500px; /* Maximum width */
+  text-align: center;
+}
+
+.dark .popup-content {
+  background-color: #333;
+}
+
+.popup-content h2 {
+  margin-bottom: 20px;
+}
+
+.popup-content p {
+  margin-bottom: 10px;
+}
+
+.popup-content button {
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px; /* Add margin to separate buttons */
+}
+
+.popup-content button:hover {
+  background-color: grey; /* Darker button color on hover */
+}
+
+.basket-icon {
+  width: 30px; /* Adjust basket icon size */
+  height: 30px; /* Adjust basket icon size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
